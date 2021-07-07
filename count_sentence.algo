@@ -5,7 +5,7 @@ VAR
     nbr_word: INTEGER := 1 ; // same thigwith the chars
     nbr_vowel: INTEGER := 0 ; //we dont sure the first char is a vowel that is the raison to init this to 0
 BEGIN
-    FOR i FROM 1 TO sentence.length STEP step  DO   // we list the sentence char after char
+    FOR i FROM 1 TO sentence.length STEP 1  DO   // we list the sentence char after char
         IF ([i] = '.' ) THEN  // if the charb is a '.' the sentence is finish we can return i the last char = nbr char
             nbr_char := i ;
         END_IF
