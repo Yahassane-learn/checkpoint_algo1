@@ -1,0 +1,19 @@
+ALGORITHM algorithm_name
+VAR 
+    sentence:STRING := "welcome to go my code, i'am King_Yahassane."; // we are the sentence with this we count the chars , words n vowel
+    nbr_char: INTEGER := 1 ; // we init this in 1 because the sentence starts with the char 
+    nbr_word: INTEGER := 1 ; // same thigwith the chars
+    nbr_vowel: INTEGER := 0 ; //we dont sure the first char is a vowel that is the raison to init this to 0
+BEGIN
+    FOR i FROM 1 TO sentence.length STEP step  DO   // we list the sentence char after char
+        IF (sentence[i] = '.' ) THEN  // if the charb is a '.' the sentence is finish we can return i the last char = nbr char
+            nbr_char := i ;
+        END_IF
+        IF (sentence[i] = ' ' ) THEN 
+            nbr_word := nbr_word+1 ;  // after every char space we add 1 in the nbr_word
+        END_IF
+        IF (sentence[i] = 'a' or 'o' or 'i' or 'u' or 'e' or 'y' ) THEN  // we search to verify if i (the char iterator) is a vowel or no 
+            nbr_vowel := nbr_vowel+1 ;   // and we add 1 in nbr_vowel if this is a vowel
+        END_IF
+    END_FOR
+END
